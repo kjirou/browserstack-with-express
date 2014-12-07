@@ -14,8 +14,11 @@ before_script:
   - unzip BrowserStackLocal-linux-x64.zip
   - mv BrowserStackLocal bin
   # Update to your BrowserStack account information
+  # 1. browserstack-conf.json
   - cp browserstack-conf.example.json browserstack-conf.json
-  - bin/BrowserStackLocal YOUR_API_KEY localhost,3001,0 > /dev/null &
+  # 2. API_KEY for BrowserStackLocal running
+  - bin/BrowserStackLocal API_KEY localhost,3001,0 > /dev/null &
+  # Wait for running BrowserStackLocal
   - sleep 5
 
 script:

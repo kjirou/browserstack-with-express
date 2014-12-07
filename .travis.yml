@@ -4,8 +4,10 @@ node_js:
   - "0.10"
 
 before_install:
+  - echo "$SELENIUM"
   - "wget http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar"
   - "export SELENIUM=`pwd`/selenium-server-standalone-2.43.1.jar"
+  - echo "$SELENIUM"
 
 script:
   - mocha test/minimum-e2e.js

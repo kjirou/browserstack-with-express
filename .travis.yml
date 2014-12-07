@@ -15,7 +15,7 @@ before_script:
   - mv BrowserStackLocal bin
   # Update to your BrowserStack account information
   - cp browserstack-conf.example.json browserstack-conf.json
-  - bin/BrowserStackLocal YOUR_API_KEY localhost,3001,0
+  - bin/BrowserStackLocal YOUR_API_KEY localhost,3001,0 > /dev/null &
 
 script:
   - mocha test/minimum-e2e.js

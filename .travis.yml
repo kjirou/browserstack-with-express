@@ -16,9 +16,8 @@ before_script:
   # Update to your BrowserStack account information
   # 1. browserstack-conf.json
   - cp browserstack-conf.example.json browserstack-conf.json
-  - bin/BrowserStackLocal WX9Py47as45EL12ttsJx localhost,3001,0 > /dev/null &
   # 2. API_KEY for BrowserStackLocal running
-  - bin/BrowserStackLocal API_KEY localhost,3001,0 > /dev/null &
+  - bin/BrowserStackLocal WX9Py47as45EL12ttsJx localhost,3001,0 > /dev/null &
   # Wait for running BrowserStackLocal
   - sleep 5
 

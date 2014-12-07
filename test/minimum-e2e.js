@@ -43,16 +43,16 @@ test.describe('minimum e2e', function() {
   });
 
   test.after(function() {
-    var self = this;
-
     var d = webdriver.promise.defer();
     this.server.close(function(err) {
       if (err) { return d.reject(err); }
       console.log('Close express server listening');
-      self.driver.quit();
       d.fulfill();
     });
-
     return d.promise;
+  });
+
+  test.after(function() {
+    this.driver.quit();
   });
 });

@@ -16,6 +16,7 @@ before_script:
   # Update to your BrowserStack account information
   - cp browserstack-conf.example.json browserstack-conf.json
   - bin/BrowserStackLocal WX9Py47as45EL12ttsJx localhost,3001,0 > /dev/null &
+  - sleep 5
 
 script:
   - mocha test/minimum-e2e.js

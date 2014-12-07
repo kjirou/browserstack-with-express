@@ -4,13 +4,18 @@ node_js:
   - "0.10"
 
 before_install:
+  # Install selenium-server-standalone
   - wget http://selenium-release.storage.googleapis.com/2.43/selenium-server-standalone-2.43.1.jar
   - export SELENIUM=`pwd`/selenium-server-standalone-2.43.1.jar
 
 before_script:
+  # Install BrowserStackLocal
+  - wget https://www.browserstack.com/browserstack-local/BrowserStackLocal-linux-x64.zip
+  - unzip BrowserStackLocal-linux-x64.zip
+  - mv BrowserStackLocal bin
   # Update to your BrowserStack account information
   - cp browserstack-conf.example.json browserstack-conf.json
-  - bin/BrowserStackLocal API_KEY localhost,3001,0
+  - bin/BrowserStackLocal YOUR_API_KEY localhost,3001,0
 
 script:
   - mocha test/minimum-e2e.js

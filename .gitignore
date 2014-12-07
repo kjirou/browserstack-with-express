@@ -36,5 +36,4 @@ pip-log.txt
 testem.*.*.*.json
 
 
-bin/BrowserStackLocal
 browserstack-conf.json

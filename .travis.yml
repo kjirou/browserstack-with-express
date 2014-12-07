@@ -8,7 +8,7 @@ before_install:
   - export SELENIUM=`pwd`/selenium-server-standalone-2.43.1.jar
 
 before_script:
-  # 自分の BrowserStack アカウントの情報になるようにすること
+  # Update to your BrowserStack account information
   - cp browserstack-conf.example.json browserstack-conf.json
 
 script:

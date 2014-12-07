@@ -16,6 +16,7 @@ test.describe('minimum e2e', function() {
       'browserName' : 'firefox',
       'browserstack.user' : browserstackConf['browserstack.user'],
       'browserstack.key' : browserstackConf['browserstack.key'],
+      'browserstack.debug' : 'true',
       'browserstack.local' : 'true'
     };
     this.driver = new webdriver.Builder()

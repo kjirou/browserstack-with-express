@@ -18,7 +18,7 @@ var driver = new webdriver.Builder().
   withCapabilities(capabilities).
   build();
 
-driver.get('http://www.google.com/ncr');
+driver.get('http://www.google.com/');
 driver.findElement(webdriver.By.name('q')).sendKeys('BrowserStack');
 driver.findElement(webdriver.By.name('btnG')).click();
 

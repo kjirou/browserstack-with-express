@@ -7,6 +7,7 @@ var capabilities = {
   'browserName' : 'firefox',
   'browserstack.user' : browserstackConf['browserstack.user'],
   'browserstack.key' : browserstackConf['browserstack.key'],
+  'browserstack.debug' : 'true',
   'browserstack.local' : 'true'
 }
 
